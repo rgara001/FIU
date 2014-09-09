@@ -1,0 +1,26 @@
+
+The Level-2 instruction formats and semantics are:
+
+IADDD	// Integer Double word (64-bit) addition
+	//	Pop two double words (top four values) from the stack as 
+	//		B_Low = m[SP], B_High = m[SP - 1],
+	//		A_Low = m[SP - 2], A_High = m[SP - 3]
+	//	Perform addition on A_Low and B_Low, and propagate the carry
+	//	  to the addition result of A_High and B_High
+	//	Push the result as
+	//		m[SP - 2] = Result_Low
+	//		m[SP - 3] = Result_High
+
+IXOR	// Integer exclusive OR operation
+	//	Pop two words (top two values) from the stack as 
+	//		Q = m[SP], P = m[SP - 1]
+	//	Perform Result = (NOT(P) AND Q) OR (P AND NOT(Q))
+	//	Push the result as
+	//		m[SP - 1] = Result
+	
+OUTBIN // Pop a word from the stack and print the binary values of the word
+	//  from MSB to LSB as groups of 4 bits with one space between groups.
+	// e.g.  1111 1111 1111 1111 1111 1111 1111 1111
+
+where m stands for the main memory (one dimensional array).
+

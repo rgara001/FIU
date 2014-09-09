@@ -1,0 +1,83 @@
+Micro Assembly Language (MAL) for Mic-1 - Tips
+=======================================
+
+The following tips would help to alleviate mic-1 programming bugs:
+
+ - Infinite loop structure of the microprogram execution:
+    main1, execution of the L2 instruction, goto main1
+
+ - In the micro program always one byte of the instruction stream
+    is fetched ahead so that when "Main1" microinstruction is executed
+    MBR will hold the opcode byte value.
+
+ - L2 opcode byte is already fetched into MBR before beginning of
+    the micro program loop and the opcode value is directly used
+    as the control store address to begin the execution of L2 semantics
+
+ - fetch operation retrieves 1 byte from instruction cache
+    according to the address in PC and store the result in MBR
+
+ - rd/wr is a 4-byte operation and deals with MAR, MDR and data cache
+
+ - NOP instruction resides at 0th location
+
+ - It is possible to have two fetch in adjacent micro instruction
+    cycle and they can overlap in time without conflict
+
+ - Micro instructions are not executed sequentially
+    Each micro instruction explicitly determines the address of
+    the next micro instruction to be executed
+
+ - H, OPC, and MDR can be used freely as scratch registers. If you use TOS as a
+	scratch register, remember to copy the top stack element value in TOS
+	at the end of the interpretation of a Level-2 instruction.
+
+ - Example of shift operations:
+	OPC = MDR >> 1  // this will perform arithmetic right shift by 1 bit
+	MDR = H + MDR << 8 // add H & MDR; then perform logical leftshift by 1 byte
+				 // of the sum and store it in MDR
+
+ - Example of logical operations (for AND/OR: one of the operand must be H register)
+	OPC = TOS = H AND MDR // perform bitwise AND between H & MDR; store the result in OPC & TOS
+	MDR = H OR MDR
+	TOS = NOT OPC	// one's complement of OPC will be stored in TOS
+
+ - Conditional branches:
+	MDR = H + OPC; if (N) goto Label1; else goto Label2 // The N value is determined
+		// from the output of ALU and branch to Label1 if N is true, otherwise goto Label2
+	Z = TOS; if (Z) goto Label3; else goto Label4 // the output of ALU is TOS value and
+		// Cbus value is not stored in any register
+	IMPORTANT to note that two conditional statements cannot use the same label.
+	For example, given the above two statements,
+		N = TOS; if (N) goto Label2; else goto Label8
+	will cause conflict since addresses of Label1 & Label2 differ only in MSB.
+	This does not permit addresses Label2 & Label8 to differ only in MSB.
+
+ - Validity of micro instructions: See Fig 4-16 (p230) for permitted ALU operations
+      * H = H - 1  -- invalid: In Fig 4-2 (p205) operation A - 1  is not supported
+      * OPC = TOS + OPC  -- invalid
+          The addition operands should come from A & B bus
+          and H is the only operand for A bus
+      * In each of the CONDITIONAL branch statement, the label must be used
+          only once in the program. For example,
+            OPC = OPC - 1; if (Z) goto decNibbles; else goto bitLoop
+            Z = MDR; if (Z) goto endOutBin; else goto bitLoop
+          will cause conflict
+      * Both rd and wr cannot be performed in the same micro instruction
+        However, rd & fetch as well as wr & fetch can be performed together
+      * The micro instruction following a rd/wr micro instruction
+        cannot initiate another rd/wr operation
+      * Before using CPP, LV as scratch variables, push (save) their values on stack;
+          at the end restore their values
+      * At the end of each instruction execution, make sure TOS holds the
+          value of the top stack element
+
+ - Microinstructions and labels are case sensitive.
+
+ - add a blank line after the last microinstruction
+   so that the last microinstruction will be processed processed by mic1asm correctly.
+
+ - Write comments to describe the logic of the microcode.
+
+--Prabakar
+	
