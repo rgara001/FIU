@@ -1,4 +1,0 @@
-FIU
-===
-
-Personal FIU folder

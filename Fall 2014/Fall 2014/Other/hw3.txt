@@ -1,4 +1,0 @@
-let rec interleave_rev (xs, ys) =
-	match (xs, ys) with
-	| ([], [])	 -> []
-	| (x::xs, y::ys) -> interleave_rev (xs, ys)::x::y;;
