@@ -1,0 +1,273 @@
+//  asg3.jas
+//
+//  Author
+//    Prabakar
+//
+//  Description
+//    Program that allows the user to choose what opcode needs to be tested
+//   (Output_binary, iaddd, ixor) or Halt.
+//    Then allows the user to enter numbers in hex format
+//     (1, 4, or 2 values according to the respective chosen opcode)
+//    and outputs the result of the operation in binary format.
+//    Use only uppercase letters for the input.
+//
+//  Usage
+//    To compile:  java ijvmasm asg3.jas
+//      This will create asg3.ijvm
+//
+//    To run:      java mic1sim prabu3.mic1 asg3.ijvm
+//      Click the Run button
+//      Enter the desired opcode option (one uppercase letter)
+//      For each prompt, enter a number (up to eight hex numbers with no spaces) and Press Enter
+//      Repeat as often as desired till Halt option is chosen
+//      Click on the Stop button to terminate the execution
+
+.constant
+OBJREF 0x40			// needed for method invocation - see S.C.O. chapter 4
+.end-constant
+
+
+.main				// start of program
+
+.var				// local variables for main program
+.end-var
+
+Start:	BIPUSH 0xA		// write LF (new line)
+	OUT
+	LDC_W OBJREF		// prepare for method call
+	INVOKEVIRTUAL getOption // get user's opcode choice
+	DUP
+	BIPUSH 0x4F		// check for 'O'utput_binary
+	IF_ICMPEQ outBinary
+	DUP
+	BIPUSH 0x44		// check for iadd'D'
+	IF_ICMPEQ iaddd
+	DUP
+	BIPUSH 0x58		// check for i'X'or
+	IF_ICMPEQ exclusiveOR
+	BIPUSH 0x48		// check for 'H'alt
+	IF_ICMPEQ terminate
+	GOTO Start
+terminate:	HALT
+
+outBinary: BIPUSH 0x48		// 'H'ex 
+	OUT
+	BIPUSH 0x56		// 'V'alue
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	LDC_W OBJREF
+	INVOKEVIRTUAL getNumber	// Read a hex value
+	LDC_W OBJREF
+	INVOKEVIRTUAL printDashLine	// Output a horizontal line
+	POP			// discard the return value of printDashLine
+	BIPUSH 0x42		// 'B'inary 
+	OUT
+	BIPUSH 0x56		// 'V'alue
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	OUTBIN			// Pop a word from stack and print its binary value
+	GOTO Start
+
+iaddd: BIPUSH 0x41		// 'A' - Ainput
+	OUT
+	BIPUSH 0x48		// 'H' -  high word
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	LDC_W OBJREF
+	INVOKEVIRTUAL getNumber	// read A_High value
+	BIPUSH 0x41		// 'A' - Ainput
+	OUT
+	BIPUSH 0x4C		// 'L' -  low word
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	LDC_W OBJREF
+	INVOKEVIRTUAL getNumber	// read A_Low value
+	BIPUSH 0x42		// 'B' - Binput
+	OUT
+	BIPUSH 0x48		// 'H' -  high word
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	LDC_W OBJREF
+	INVOKEVIRTUAL getNumber	// read B_High value
+	BIPUSH 0x42		// 'B' - Binput
+	OUT
+	BIPUSH 0x4C		// 'L' -  low word
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	LDC_W OBJREF
+	INVOKEVIRTUAL getNumber	// read B_Low value
+	IADDD		    // pop four words from stack and push the double word sum
+	SWAP			// swap Sum_Low & Sum_High words on stack
+	LDC_W OBJREF
+	INVOKEVIRTUAL printDashLine	// Output a horizontal line
+	POP			// discard the return value of printDashLine
+	BIPUSH 0x53		// 'S'um 
+	OUT
+	BIPUSH 0x48		// 'H'igh
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	OUTBIN			// Pop Sum_High word from stack and print its binary value
+	BIPUSH 0xA		// write LF (new line)
+	OUT
+	BIPUSH 0x53		// 'S'um 
+	OUT
+	BIPUSH 0x4C		// 'L'ow
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	OUTBIN			// Pop Sum_Low word from stack and print its binary value
+	GOTO Start
+
+exclusiveOR: BIPUSH 0x50		// value for 'P'
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	LDC_W OBJREF
+	INVOKEVIRTUAL getNumber	// read Value for P
+	BIPUSH 0x51		// value for 'Q'
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	LDC_W OBJREF
+	INVOKEVIRTUAL getNumber	// read Value for Q
+	IXOR			// Pop two words from stack and push their XOR result
+	LDC_W OBJREF
+	INVOKEVIRTUAL printDashLine	// Output a horizontal line
+	POP			// discard the return value of printDashLine
+	BIPUSH 0x58		// 'X'or value 
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	OUTBIN		// Pop XOR Value word from stack and print its binary value
+	GOTO Start
+
+.end-main
+
+.method getOption()
+	BIPUSH 0xA		// Output LF (newline)
+	OUT
+	BIPUSH 0x4F		// 'O' - for OutputBinary option
+	OUT
+	BIPUSH 0x2F		// '/'
+	OUT
+	BIPUSH 0x44		// 'D' - for iaddD option
+	OUT
+	BIPUSH 0x2F		// '/' 
+	OUT
+	BIPUSH 0x58		// 'X' - for iXor option
+	OUT
+	BIPUSH 0x2F		// '/'
+	OUT
+	BIPUSH 0x48		// 'H' - for Halt option
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+	BIPUSH 0x3F		// '?'
+	OUT
+	BIPUSH 0x20		// space
+	OUT
+getChar:	IN		// Read user input character
+	DUP
+	BIPUSH 0x48
+	IF_ICMPEQ printInp	// option 'H'
+	DUP
+	BIPUSH 0x4F
+	IF_ICMPEQ printInp	// option 'O'
+	DUP
+	BIPUSH 0x44
+	IF_ICMPEQ printInp	// option 'D'
+	DUP
+	BIPUSH 0x58
+	IF_ICMPEQ printInp	// option 'X'
+	GOTO getChar
+printInp:	DUP
+	OUT			// Echo the user input value
+	BIPUSH 0xA		// Output LF
+	OUT
+	IRETURN
+.end-method
+
+.method getNumber()
+.var
+inpHexList
+.end-var
+
+	BIPUSH 0x0		// initialize inpHexList
+      ISTORE inpHexList
+getChar: IN			// read key press
+	DUP			// duplicate key for comparison
+	BIPUSH 0xA		// if key = LF,
+	IF_ICMPEQ finish	//   return the input hex characters
+	DUP
+	BIPUSH 0x30		// if key < "0"
+	ISUB			//
+	IFLT invalidKey		//   goto invalidKey (key is not a hex digit)
+    	DUP
+	BIPUSH 0x3A		// else if key < ":"
+	ISUB			//
+	IFLT hexDigit		//   goto hexDigit (key is numeric character - "0"-"9")
+	DUP
+	BIPUSH 0x41		// else if key < "A"
+	ISUB			//
+	IFLT invalidKey		//   goto invalidKey (key is not a hex digit)
+	DUP
+	BIPUSH 0x46		// else if key > "F"
+	SWAP			//  
+	ISUB			//
+	IFLT invalidKey		//   goto invalidKey (key is not a hex digit)
+	DUP			// else (key is letter - "A"-"F")
+	OUT			//   print key
+	BIPUSH 0x37		//   convert key from character to number
+	ISUB			//
+	GOTO hexLetter		//   goto hexLetter
+hexDigit: DUP
+	OUT			// print key (numeric character)
+	BIPUSH 0x30		// convert key from character to number
+	ISUB
+hexLetter: ILOAD inpHexList 	// shift inpHexList left 4 bits
+	DUP
+	IADD
+	DUP
+	IADD
+	DUP
+	IADD
+	DUP
+	IADD
+	IADD			// add input_key to inpHexList
+	ISTORE inpHexList
+	GOTO getChar		// get next key
+invalidKey:	POP		// pop invalid character
+	GOTO getChar		// get next key
+finish: OUT			// print LF
+	ILOAD inpHexList	// load inpHexList as return value
+	IRETURN			// return
+.end-method
+
+.method printDashLine()
+	BIPUSH 0x3D		// print "========"
+	DUP
+	OUT
+	DUP
+	OUT
+	DUP
+	OUT
+	DUP
+	OUT
+	DUP
+	OUT
+	DUP
+	OUT
+	DUP
+	OUT
+	OUT
+	BIPUSH 0xA		// print LF
+	OUT
+	IRETURN
+.end-method

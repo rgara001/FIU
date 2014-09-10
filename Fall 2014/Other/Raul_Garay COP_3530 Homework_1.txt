@@ -1,0 +1,141 @@
+ /* COURSE      : COP 3530
+       * Section     : U03
+       * Semester    : Spring 2014
+       * Instructor  : Alex Pelin
+       * Author      : RAUL GARAY
+       * Assignment #: 1
+       * Due date    : January 24, 2014
+       * Description : Insert a 2-3 line description of the assignment
+       *
+       *                            Signed: Raul Garay
+       *
+       *  Problem I. 
+
+    In this handout you have the 3 files that are part of your home-
+work, the expected output and some style guidelines.
+
+The 3 files are ArrayList, that emulates an array list,
+the interface List, and a driver that tests ArrayList.
+ Your job is to write the missing methods of ArrayList.
+The header comments of the methods are the guidelines.
+
+*/
+
+import java.util.NoSuchElementException;
+
+// the array list is implemented as the initial
+// segment [0:size-1] of arr
+
+public class ArrayList<T> implements List<T>
+{
+    // the initial size of arr
+    private static final int INIT = 3;
+    private int size = 0; // the size of the array list
+    private T[] arr; // the array
+
+    // construct an empty array list
+    public ArrayList()
+    {
+        arr = (T[]) new Object[INIT];
+    }
+
+    // insert the value v at index i
+    // if i is out of index, throw an index out of bounds
+    // exception. If the arr is full, create an array of twice
+    // the size of arr, copy arr onto the new array and make
+    // the new array the object array
+    // Then do the insertion
+    public void add(int i, T v)
+    {
+        if(i < 0 || i > size)
+            throw new ArrayIndexOutOfBoundsException();
+        
+        doubleArrCheck(); //Double arr size if it is full
+        
+        //Shift array elements from index i:size-1 to the right
+        System.arraycopy(arr, i, arr, i + 1, size - i);
+        arr[i] = v; // Insertion
+        size++;
+    }
+
+    // add in the last location
+    public void add(T v)
+    {
+        doubleArrCheck();
+        arr[size] = v; //Insertion
+        size++;
+    }
+    
+    //Helper method
+    //Double the size of arr if it is full without loss of data
+    private void doubleArrCheck()
+    {
+        if(arr.length == size) {
+            T[] temp = (T[]) new Object[arr.length * 2];
+            System.arraycopy(arr, 0, temp, 0, size);
+            arr = temp;        
+        }
+    }
+
+    // return the value at i
+    // if i is out of bounds throw a no such element exception
+    public T get(int i)
+    {
+        if(i < 0 || i >= size)
+            throw new NoSuchElementException();
+        
+        return arr[i];
+    }
+
+    // remove the value at i
+    // if i is out of bounds throw a no such element exception
+    public T remove(int i)
+    {
+        if(i < 0 || i >= size)
+            throw new NoSuchElementException();
+        
+        T removedElement = arr[i];
+        //Shift elements from index i to size - 1 to the left by 1
+        System.arraycopy(arr, i + 1, arr, i, size - 1 - i);
+        size--;
+        return removedElement;
+    }
+
+    // set the value at i to v return the old value
+    // if i is out of bounds throw an array index out of bounds
+    // exception
+    public T set (int i, T v)
+    {
+        if(i < 0 || i >= size)
+            throw new IndexOutOfBoundsException();
+        
+        T temp = arr[i];
+        arr[i] = v;
+        return temp;
+    }
+
+    // clear the array sets size to zero
+    public void clear()
+    {
+        size = 0;
+    }
+
+     // returns the size
+    public int size()
+    {
+        return size;
+    }
+
+
+    // print the slice arr[0:size-1]
+    public void printArray()
+    {
+        for(int i = 0; i < size; i++)
+        {
+            if(i != (size - 1))
+                System.out.print(arr[i] + ", ");
+            else
+                System.out.print(arr[i] + "\n");
+        }        
+    }
+}
