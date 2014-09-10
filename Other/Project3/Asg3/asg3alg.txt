@@ -17,7 +17,7 @@ IXOR	// Integer exclusive OR operation
 	//	Perform Result = (NOT(P) AND Q) OR (P AND NOT(Q))
 	//	Push the result as
 	//		m[SP - 1] = Result
-	//Random Comment
+	//Random Comment 2
 	
 OUTBIN // Pop a word from the stack and print the binary values of the word
 	//  from MSB to LSB as groups of 4 bits with one space between groups.
