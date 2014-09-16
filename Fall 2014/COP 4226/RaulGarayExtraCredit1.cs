@@ -28,8 +28,9 @@ using System.Windows.Forms;
 		{
 			this.panel1.BackColor = System.Drawing.Color.Red;
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panel1.Size = new System.Drawing.Size(50,50);
 			Label panel1Label = new Label();
-			panel1Label.Text = myName;
+			panel1Label.Name = myName;
 			panel1.Controls.Add(panel1Label);
 		}
 	}
