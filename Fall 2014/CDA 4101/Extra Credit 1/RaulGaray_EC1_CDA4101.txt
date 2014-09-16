@@ -1,5 +1,19 @@
-1. Calculate the Hamming Code for 00100010 using odd parity.
+Example:
+  The data word	is 11001010.
+  The code word	is 001110001010 using even parity.
+  The number of ones for parity bit 1 are 4. 
+  The number of ones for parity bit 2 are 2. 
+  The number of ones for parity bit 4 is 1. 
+  The number of ones for parity bit 8 are 2. 
 
+
+1. Calculate the Hamming Code for 00100010 using odd parity.
+		The Data word is 00100010
+		The code word is 010001000010
+		The number of ones for parity bit 1 are 1
+		The number of ones for parity bit 2 are 3
+		The number of ones for parity bit 4 are 1
+		The number of ones for parity bit 8 are 1
 
 
 2. Calculate the Hamming Code for 001101010000 using even parity.
