@@ -1,26 +1,40 @@
 using System;
 using System.Windows.Forms;
-using System.Drawing;
 
-	//just a comment
 	class Window : Form
 	{
 		private String myName;
+		private Panel panel1;
 
-		public Window(String arg1, String arg2)
+		public Window(String text, String myName)
 		{
-			this.Text = arg1;
-			this.myName = arg2;
-			this.Size = new Size(500,500);
+			this.Text = text;
+			this.myName = myName;
+			this.Size = new System.Drawing.Size(500,500);
+
+			//Bullet Point 2
+			this.panel1 = new Panel();
+			configurePanel1(myName);
+			this.Controls.Add(this.panel1);
+
 		}
 
 		public String getName()
 		{
 			return this.myName;
 		}
+
+		private void configurePanel1(String myName)
+		{
+			this.panel1.BackColor = System.Drawing.Color.Red;
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			Label panel1Label = new Label();
+			panel1Label.Text = myName;
+			panel1.Controls.Add(panel1Label);
+		}
 	}
 
-	class EC
+	class ExtraCredit1
 	{
 		static void Main()
 		{
