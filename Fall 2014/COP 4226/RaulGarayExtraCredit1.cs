@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 
+	//just a comment
 	class Window : Form
 	{
 		private String myName;
