@@ -1,0 +1,13 @@
+1. Calculate the Hamming Code for 00100010 using odd parity.
+
+
+
+2. Calculate the Hamming Code for 001101010000 using even parity.
+
+
+
+3. Calculate the Hamming Code for 1000010000100010 using even parity.
+
+
+
+4. Calculate the Hamming Code for 00110101000010000100 using even parity.
