@@ -11,7 +11,7 @@ Example:
 		The Data word is 00100010
 		The code word is 010001000010
 		The number of ones for parity bit 1 are 1
-		The number of ones for parity bit 2 are 3
+		The number of ones for parity bit 2 are 2
 		The number of ones for parity bit 4 are 1
 		The number of ones for parity bit 8 are 1
 
@@ -19,15 +19,21 @@ Example:
 2. Calculate the Hamming Code for 001101010000 using even parity.
 		The Data word is 001101010000
 		The code word is 11010110010100000
-		The number of ones for parity bit 1 are 2
-		The number of ones for parity bit 2 are 4
-		The number of ones for parity bit 4 are 4
+		The number of ones for parity bit 1 are 1
+		The number of ones for parity bit 2 are 3
+		The number of ones for parity bit 4 are 3
 		The number of ones for parity bit 8 are 2
 		The number of ones for parity bit 16 are 0
-		
+
 
 3. Calculate the Hamming Code for 1000010000100010 using even parity.
-
+		The Data word is 1000010000100010
+		The code word is 011000000100001100010
+		The number of ones for parity bit 1 are 2
+		The number of ones for parity bit 2 are 3
+		The number of ones for parity bit 4 are 2
+		The number of ones for parity bit 8 are 2
+		The number of ones for parity bit 16 are 1
 
 
 4. Calculate the Hamming Code for 00110101000010000100 using even parity.
