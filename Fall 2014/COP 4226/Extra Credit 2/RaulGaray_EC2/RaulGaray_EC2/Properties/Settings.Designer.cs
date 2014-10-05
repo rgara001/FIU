@@ -25,25 +25,25 @@ namespace RaulGaray_EC2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
-        public global::System.Drawing.Size Setting {
+        [global::System.Configuration.DefaultSettingValueAttribute("500, 500")]
+        public global::System.Drawing.Size Size {
             get {
-                return ((global::System.Drawing.Size)(this["Setting"]));
+                return ((global::System.Drawing.Size)(this["Size"]));
             }
             set {
-                this["Setting"] = value;
+                this["Size"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("100, 100")]
+        public global::System.Drawing.Point Location {
             get {
-                return ((string)(this["Setting1"]));
+                return ((global::System.Drawing.Point)(this["Location"]));
             }
             set {
-                this["Setting1"] = value;
+                this["Location"] = value;
             }
         }
     }
