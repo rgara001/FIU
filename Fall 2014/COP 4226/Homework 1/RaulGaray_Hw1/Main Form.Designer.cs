@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.blahToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePreferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadPreferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,10 +40,10 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openEllipticChildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openRectangularChildToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -53,20 +52,12 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.blahToolStripMenuItem,
             this.zipToolStripMenuItem,
             this.savePreferencesToolStripMenuItem,
             this.reloadPreferencesToolStripMenuItem,
             this.resetPreferencesToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(230, 114);
-            // 
-            // blahToolStripMenuItem
-            // 
-            this.blahToolStripMenuItem.Name = "blahToolStripMenuItem";
-            this.blahToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.blahToolStripMenuItem.Text = "Open Preferences Modally";
-            this.blahToolStripMenuItem.Click += new System.EventHandler(this.blahToolStripMenuItem_Click);
             // 
             // zipToolStripMenuItem
             // 
@@ -141,6 +132,12 @@
             this.openRectangularChildToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.openRectangularChildToolStripMenuItem.Text = "Open Rectangular Child";
             // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.preferencesToolStripMenuItem.Text = "Preferences";
+            // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -153,29 +150,27 @@
             // oathToolStripMenuItem
             // 
             this.oathToolStripMenuItem.Name = "oathToolStripMenuItem";
-            this.oathToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.oathToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.oathToolStripMenuItem.Text = "Oath";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // preferencesToolStripMenuItem
-            // 
-            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.preferencesToolStripMenuItem.Text = "Preferences";
             // 
             // MainForm
             // 
+            
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 470);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
+            //form.MdiParent = this;
+            //form.Show();
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Raul Garay - Hw 1";
@@ -190,9 +185,8 @@
         }
 
         #endregion
-
+        private Control_Library.BaseDialogForm form = new Control_Library.BaseDialogForm();
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem blahToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zipToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem savePreferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reloadPreferencesToolStripMenuItem;

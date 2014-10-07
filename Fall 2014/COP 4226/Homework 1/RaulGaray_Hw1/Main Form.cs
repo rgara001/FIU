@@ -15,11 +15,11 @@ namespace RaulGaray_Hw1
         public MainForm()
         {
             InitializeComponent();
+            Control_Library.BaseDialogForm form = new Control_Library.BaseDialogForm();
+            form.MdiParent = this;
+            form.Show();
+            
         }
 
-        private void blahToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
