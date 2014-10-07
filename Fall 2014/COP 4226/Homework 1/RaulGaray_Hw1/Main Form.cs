@@ -16,5 +16,10 @@ namespace RaulGaray_Hw1
         {
             InitializeComponent();
         }
+
+        private void blahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
