@@ -14,8 +14,19 @@ namespace RaulGaray_Hw1
     {
         public PreferencesDialog()
         {
-            InitializeComponent();
-            this.cancelButton.CausesValidation = false;
+            //Validating that no Preference dialog is open when opening a new one.
+            bool formOpen = false;
+            foreach (Form form in Application.OpenForms)
+                if (form.GetType().Equals(this))
+                    formOpen = true;
+
+            if (!formOpen)
+            {
+                InitializeComponent();
+                this.cancelButton.CausesValidation = false;
+            }
+            else
+                MessageBox.Show("Error: Cannot open. A Preferences dialog is already open.");
         }
 
         private void okButton_Click(object sender, EventArgs e)
