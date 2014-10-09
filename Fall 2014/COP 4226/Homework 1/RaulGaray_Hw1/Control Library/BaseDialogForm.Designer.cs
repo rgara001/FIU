@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.middlePanel = new System.Windows.Forms.Panel();
             this.courseInfo = new Control_Library.Course();
             this.FullName = new Control_Library.Full_Name();
-            this.MiddlePanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
+            // 
+            // middlePanel
+            // 
+            this.middlePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.middlePanel.BackColor = System.Drawing.Color.Transparent;
+            this.middlePanel.Location = new System.Drawing.Point(0, 37);
+            this.middlePanel.Name = "middlePanel";
+            this.middlePanel.Size = new System.Drawing.Size(284, 196);
+            this.middlePanel.TabIndex = 0;
             // 
             // courseInfo
             // 
@@ -54,20 +65,12 @@
             this.FullName.Size = new System.Drawing.Size(284, 28);
             this.FullName.TabIndex = 0;
             // 
-            // MiddlePanel
-            // 
-            this.MiddlePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MiddlePanel.Location = new System.Drawing.Point(0, 37);
-            this.MiddlePanel.Name = "MiddlePanel";
-            this.MiddlePanel.Size = new System.Drawing.Size(284, 196);
-            this.MiddlePanel.TabIndex = 4;
-            // 
             // BaseDialogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.MiddlePanel);
+            this.Controls.Add(this.middlePanel);
             this.Controls.Add(this.courseInfo);
             this.Controls.Add(this.FullName);
             this.Name = "BaseDialogForm";
@@ -80,7 +83,7 @@
 
         private Full_Name FullName;
         private Course courseInfo;
-        private System.Windows.Forms.Panel MiddlePanel;
+        protected internal System.Windows.Forms.Panel middlePanel;
 
     }
 }

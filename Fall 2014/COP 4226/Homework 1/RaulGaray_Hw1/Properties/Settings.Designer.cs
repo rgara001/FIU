@@ -50,12 +50,12 @@ namespace RaulGaray_Hw1.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int RectChildWidth {
+        public int RectChildHeight {
             get {
-                return ((int)(this["RectChildWidth"]));
+                return ((int)(this["RectChildHeight"]));
             }
             set {
-                this["RectChildWidth"] = value;
+                this["RectChildHeight"] = value;
             }
         }
         

@@ -44,6 +44,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openPreferencesModallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openPreferencesModelesslyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -57,7 +59,7 @@
             this.reloadPreferencesToolStripMenuItem,
             this.resetPreferencesToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(230, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(230, 92);
             // 
             // zipToolStripMenuItem
             // 
@@ -134,6 +136,9 @@
             // 
             // preferencesToolStripMenuItem
             // 
+            this.preferencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openPreferencesModallyToolStripMenuItem,
+            this.openPreferencesModelesslyToolStripMenuItem});
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
             this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.preferencesToolStripMenuItem.Text = "Preferences";
@@ -159,18 +164,26 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
+            // openPreferencesModallyToolStripMenuItem
+            // 
+            this.openPreferencesModallyToolStripMenuItem.Name = "openPreferencesModallyToolStripMenuItem";
+            this.openPreferencesModallyToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.openPreferencesModallyToolStripMenuItem.Text = "Open Preferences Modally";
+            // 
+            // openPreferencesModelesslyToolStripMenuItem
+            // 
+            this.openPreferencesModelesslyToolStripMenuItem.Name = "openPreferencesModelesslyToolStripMenuItem";
+            this.openPreferencesModelesslyToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.openPreferencesModelesslyToolStripMenuItem.Text = "Open Preferences Modelessly";
+            // 
             // MainForm
             // 
-            
-            
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 470);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
-            //form.MdiParent = this;
-            //form.Show();
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Raul Garay - Hw 1";
@@ -201,6 +214,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oathToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openPreferencesModallyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openPreferencesModelesslyToolStripMenuItem;
 
     }
 }

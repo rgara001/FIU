@@ -8,7 +8,7 @@
     <Setting Name="EllipticChildRatio" Type="System.Single" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="RectChildWidth" Type="System.Int32" Scope="User">
+    <Setting Name="RectChildHeight" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="RectChildRatio" Type="System.Single" Scope="User">

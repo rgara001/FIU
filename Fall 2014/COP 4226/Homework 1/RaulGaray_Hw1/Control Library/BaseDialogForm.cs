@@ -23,13 +23,13 @@ namespace Control_Library
             this.BackColor = parentBackColor;
             this.BackgroundImage = parentBackImage;
         }
-
+        /*
         public Panel middlePanel
         {
             get { return this.MiddlePanel; }
             set { this.MiddlePanel = value; }
         }
-
+        */
         private void courseInfo_Load(object sender, EventArgs e)
         {
 

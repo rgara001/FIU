@@ -42,7 +42,7 @@
             this.courseName.Name = "courseName";
             this.courseName.Size = new System.Drawing.Size(289, 32);
             this.courseName.TabIndex = 0;
-            this.courseName.Text = "Course Name";
+            this.courseName.Text = "COP 4226";
             this.courseName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.courseName.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -56,7 +56,7 @@
             this.courseSemester.Name = "courseSemester";
             this.courseSemester.Size = new System.Drawing.Size(289, 15);
             this.courseSemester.TabIndex = 1;
-            this.courseSemester.Text = "Course Semester";
+            this.courseSemester.Text = "Fall 2014";
             this.courseSemester.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.courseSemester.Click += new System.EventHandler(this.courseSemester_Click);
             // 

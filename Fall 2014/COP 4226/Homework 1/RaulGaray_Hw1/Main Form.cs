@@ -19,7 +19,13 @@ namespace RaulGaray_Hw1
             form.MdiParent = this;
             form.Show();
 
-            runAboutDialog();
+
+
+            ///////////////////////     TESTING     ///////////////////
+            //runAboutDialog();
+            PreferencesDialog dlg = new PreferencesDialog();
+            dlg.ShowDialog();
+            MessageBox.Show("settings are: " + Properties.Settings.Default.EllipticChildWidth);
 
             
         }
@@ -34,8 +40,10 @@ namespace RaulGaray_Hw1
                 description.Text += "The child windows can have different colors and can be moved by the mouse.";
                 description.AutoSize = false;
                 description.Dock = DockStyle.Fill;
-                description.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                dlg.middlePanel.Controls.Add(description);
+                description.ImageAlign = ContentAlignment.MiddleCenter;
+                dlg.ControlBox = false;
+                dlg.Controls.Add(description);
+                //dlg.middlePanel.Controls.Add(description);
                 dlg.ShowDialog();
             }
         }
