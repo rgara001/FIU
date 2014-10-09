@@ -16,5 +16,23 @@ namespace Control_Library
         {
             InitializeComponent();
         }
+
+        public BaseDialogForm(Color parentBackColor, Image parentBackImage)
+        {
+            InitializeComponent();
+            this.BackColor = parentBackColor;
+            this.BackgroundImage = parentBackImage;
+        }
+
+        public Panel middlePanel
+        {
+            get { return this.MiddlePanel; }
+            set { this.MiddlePanel = value; }
+        }
+
+        private void courseInfo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,28 +34,30 @@
             // 
             // courseName
             // 
-            this.courseName.AutoSize = true;
             this.courseName.BackColor = System.Drawing.Color.Transparent;
+            this.courseName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.courseName.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.courseName.Location = new System.Drawing.Point(83, 0);
+            this.courseName.Location = new System.Drawing.Point(0, 0);
             this.courseName.Name = "courseName";
-            this.courseName.Size = new System.Drawing.Size(102, 19);
+            this.courseName.Size = new System.Drawing.Size(289, 32);
             this.courseName.TabIndex = 0;
             this.courseName.Text = "Course Name";
+            this.courseName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.courseName.Click += new System.EventHandler(this.label1_Click);
             // 
             // courseSemester
             // 
-            this.courseSemester.AutoSize = true;
             this.courseSemester.BackColor = System.Drawing.Color.Transparent;
+            this.courseSemester.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.courseSemester.Font = new System.Drawing.Font("Imprint MT Shadow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseSemester.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.courseSemester.Location = new System.Drawing.Point(85, 19);
+            this.courseSemester.Location = new System.Drawing.Point(0, 17);
             this.courseSemester.Name = "courseSemester";
-            this.courseSemester.Size = new System.Drawing.Size(100, 15);
+            this.courseSemester.Size = new System.Drawing.Size(289, 15);
             this.courseSemester.TabIndex = 1;
             this.courseSemester.Text = "Course Semester";
+            this.courseSemester.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.courseSemester.Click += new System.EventHandler(this.courseSemester_Click);
             // 
             // Course
@@ -66,9 +68,8 @@
             this.Controls.Add(this.courseSemester);
             this.Controls.Add(this.courseName);
             this.Name = "Course";
-            this.Size = new System.Drawing.Size(288, 52);
+            this.Size = new System.Drawing.Size(289, 32);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

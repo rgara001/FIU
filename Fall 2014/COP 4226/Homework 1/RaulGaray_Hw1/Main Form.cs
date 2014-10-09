@@ -15,11 +15,32 @@ namespace RaulGaray_Hw1
         public MainForm()
         {
             InitializeComponent();
-            Control_Library.BaseDialogForm form = new Control_Library.BaseDialogForm();
+            Control_Library.BaseWindowsForm form = new Control_Library.BaseWindowsForm();
             form.MdiParent = this;
             form.Show();
+
+            runAboutDialog();
+
             
         }
+
+        private void runAboutDialog()
+        {
+            using (Control_Library.BaseDialogForm dlg = new Control_Library.BaseDialogForm())
+            {
+                Label description = new Label();
+                description.Text = "This app opens child windows that are either ellipses or rectangles. One dimension ";
+                description.Text += "(height or width) of each will be determined by a ratio that is set by the user. ";
+                description.Text += "The child windows can have different colors and can be moved by the mouse.";
+                description.AutoSize = false;
+                description.Dock = DockStyle.Fill;
+                description.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                dlg.middlePanel.Controls.Add(description);
+                dlg.ShowDialog();
+            }
+        }
+
+
 
     }
 }

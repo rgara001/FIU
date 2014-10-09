@@ -47,6 +47,12 @@
     <Compile Include="BaseDialogForm.Designer.cs">
       <DependentUpon>BaseDialogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseWindowsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseWindowsForm.Designer.cs">
+      <DependentUpon>BaseWindowsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Course.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -65,18 +71,42 @@
     <Compile Include="Oath.Designer.cs">
       <DependentUpon>Oath.cs</DependentUpon>
     </Compile>
+    <Compile Include="OathDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OathDialog.Designer.cs">
+      <DependentUpon>OathDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BaseDialogForm.resx">
       <DependentUpon>BaseDialogForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseWindowsForm.resx">
+      <DependentUpon>BaseWindowsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Course.resx">
       <DependentUpon>Course.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FullName.resx">
       <DependentUpon>FullName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oath.resx">
+      <DependentUpon>Oath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OathDialog.resx">
+      <DependentUpon>OathDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

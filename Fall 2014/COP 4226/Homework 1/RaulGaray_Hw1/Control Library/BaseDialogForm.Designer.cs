@@ -28,37 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.full_Name1 = new Control_Library.Full_Name();
-            this.course1 = new Control_Library.Course();
+            this.courseInfo = new Control_Library.Course();
+            this.FullName = new Control_Library.Full_Name();
+            this.MiddlePanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // full_Name1
+            // courseInfo
             // 
-            this.full_Name1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.full_Name1.BackColor = System.Drawing.Color.Transparent;
-            this.full_Name1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.full_Name1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.full_Name1.Location = new System.Drawing.Point(0, 233);
-            this.full_Name1.Name = "full_Name1";
-            this.full_Name1.Size = new System.Drawing.Size(284, 28);
-            this.full_Name1.TabIndex = 0;
+            this.courseInfo.BackColor = System.Drawing.Color.Transparent;
+            this.courseInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.courseInfo.Location = new System.Drawing.Point(0, 0);
+            this.courseInfo.Name = "courseInfo";
+            this.courseInfo.Size = new System.Drawing.Size(284, 37);
+            this.courseInfo.TabIndex = 1;
+            this.courseInfo.Load += new System.EventHandler(this.courseInfo_Load);
             // 
-            // course1
+            // FullName
             // 
-            this.course1.BackColor = System.Drawing.Color.Transparent;
-            this.course1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.course1.Location = new System.Drawing.Point(0, 0);
-            this.course1.Name = "course1";
-            this.course1.Size = new System.Drawing.Size(284, 37);
-            this.course1.TabIndex = 1;
+            this.FullName.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.FullName.BackColor = System.Drawing.Color.Transparent;
+            this.FullName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.FullName.Location = new System.Drawing.Point(0, 233);
+            this.FullName.Name = "FullName";
+            this.FullName.Size = new System.Drawing.Size(284, 28);
+            this.FullName.TabIndex = 0;
+            // 
+            // MiddlePanel
+            // 
+            this.MiddlePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MiddlePanel.Location = new System.Drawing.Point(0, 37);
+            this.MiddlePanel.Name = "MiddlePanel";
+            this.MiddlePanel.Size = new System.Drawing.Size(284, 196);
+            this.MiddlePanel.TabIndex = 4;
             // 
             // BaseDialogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.course1);
-            this.Controls.Add(this.full_Name1);
+            this.Controls.Add(this.MiddlePanel);
+            this.Controls.Add(this.courseInfo);
+            this.Controls.Add(this.FullName);
             this.Name = "BaseDialogForm";
             this.Text = "BaseForm";
             this.ResumeLayout(false);
@@ -67,8 +78,9 @@
 
         #endregion
 
-        private Full_Name full_Name1;
-        private Course course1;
+        private Full_Name FullName;
+        private Course courseInfo;
+        private System.Windows.Forms.Panel MiddlePanel;
 
     }
 }
