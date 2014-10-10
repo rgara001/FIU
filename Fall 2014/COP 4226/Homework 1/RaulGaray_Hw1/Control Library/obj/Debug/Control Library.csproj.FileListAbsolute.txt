@@ -5,8 +5,8 @@ C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Co
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control_Library.Course.resources
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control_Library.Full_Name.resources
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control_Library.Oath.resources
-C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control_Library.OathDialog.resources
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control_Library.Properties.Resources.resources
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control Library.csproj.GenerateResource.Cache
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control Library.dll
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control Library.pdb
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\Control Library\obj\Debug\Control Library.csprojResolveAssemblyReference.cache

@@ -1,6 +1,6 @@
-﻿namespace Control_Library
+﻿namespace RaulGaray_Hw1
 {
-    partial class OathDialog
+    partial class EllipticChild
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.oath = new Control_Library.Oath();
             this.SuspendLayout();
             // 
-            // oath
-            // 
-            this.oath.BackColor = System.Drawing.Color.Transparent;
-            this.oath.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.oath.Location = new System.Drawing.Point(0, 37);
-            this.oath.Name = "oath";
-            this.oath.Size = new System.Drawing.Size(499, 270);
-            this.oath.TabIndex = 0;
-            // 
-            // OathDialog
+            // EllipticChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 335);
-            this.Controls.Add(this.oath);
-            this.Name = "OathDialog";
-            this.Text = "OathWindow";
-            this.Controls.SetChildIndex(this.oath, 0);
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "EllipticChild";
+            this.Text = "EllipticChild";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.child_Paint);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Oath oath;
     }
 }

@@ -65,7 +65,7 @@
             this.widthTextBox.Size = new System.Drawing.Size(40, 20);
             this.widthTextBox.TabIndex = 0;
             this.widthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.widthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNumeric_Validating);
+            this.widthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxInt_Validating);
             // 
             // ellipcticRatioTextBox
             // 
@@ -75,7 +75,7 @@
             this.ellipcticRatioTextBox.Size = new System.Drawing.Size(40, 20);
             this.ellipcticRatioTextBox.TabIndex = 1;
             this.ellipcticRatioTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ellipcticRatioTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNumeric_Validating);
+            this.ellipcticRatioTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxFloat_Validating);
             // 
             // heightTextBox
             // 
@@ -85,7 +85,7 @@
             this.heightTextBox.Size = new System.Drawing.Size(40, 20);
             this.heightTextBox.TabIndex = 2;
             this.heightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.heightTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNumeric_Validating);
+            this.heightTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxInt_Validating);
             // 
             // WidthLabel
             // 
@@ -170,19 +170,23 @@
             this.rectRatioTextBox.Size = new System.Drawing.Size(40, 20);
             this.rectRatioTextBox.TabIndex = 9;
             this.rectRatioTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.rectRatioTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxNumeric_Validating);
+            this.rectRatioTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxFloat_Validating);
             // 
             // PreferencesDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RaulGaray_Hw1.Properties.Resources.Preferences_Background;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.BackgroundImage = global::RaulGaray_Hw1.Properties.Resources.cloud;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(337, 292);
+            this.DoubleBuffered = true;
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PreferencesDialog";
             this.Text = "Preferences";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preferences_KeyDown);
             this.middlePanel.ResumeLayout(false);
             this.middlePanel.PerformLayout();
             this.ResumeLayout(false);

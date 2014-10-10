@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseWindowsForm));
             this.baseContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseMenuStrip = new System.Windows.Forms.MenuStrip();
@@ -77,8 +78,10 @@
             // 
             // closeChildToolStripMenuItem
             // 
+            this.closeChildToolStripMenuItem.MergeIndex = 2;
             this.closeChildToolStripMenuItem.Name = "closeChildToolStripMenuItem";
-            this.closeChildToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.closeChildToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.closeChildToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.closeChildToolStripMenuItem.Text = "Close Child";
             this.closeChildToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -105,6 +108,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.ContextMenuStrip = this.baseContextMenu;
             this.Controls.Add(this.baseMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BaseWindowsForm";
             this.Text = "BaseWindowsForm";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BaseForm_MouseDown);

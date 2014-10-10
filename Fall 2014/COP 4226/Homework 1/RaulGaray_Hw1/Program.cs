@@ -16,7 +16,17 @@ namespace RaulGaray_Hw1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            if (Properties.Settings.Default.SkipLogin)
+                Application.Run(new MainForm());
+            else
+            {
+                LoginDialog dlg = new LoginDialog();
+                dlg.ShowDialog();
+                DialogResult res = dlg.DialogResult;
+                if (res == DialogResult.Yes)
+                    Application.Run(new MainForm());
+            }
         }
     }
 }

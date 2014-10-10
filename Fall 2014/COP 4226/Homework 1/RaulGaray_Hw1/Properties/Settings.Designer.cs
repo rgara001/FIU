@@ -25,7 +25,7 @@ namespace RaulGaray_Hw1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
         public int EllipticChildWidth {
             get {
                 return ((int)(this["EllipticChildWidth"]));
@@ -37,7 +37,7 @@ namespace RaulGaray_Hw1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
         public float EllipticChildRatio {
             get {
                 return ((float)(this["EllipticChildRatio"]));
@@ -49,7 +49,7 @@ namespace RaulGaray_Hw1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
         public int RectChildHeight {
             get {
                 return ((int)(this["RectChildHeight"]));
@@ -61,13 +61,25 @@ namespace RaulGaray_Hw1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
         public float RectChildRatio {
             get {
                 return ((float)(this["RectChildRatio"]));
             }
             set {
                 this["RectChildRatio"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool SkipLogin {
+            get {
+                return ((bool)(this["SkipLogin"]));
+            }
+            set {
+                this["SkipLogin"] = value;
             }
         }
     }

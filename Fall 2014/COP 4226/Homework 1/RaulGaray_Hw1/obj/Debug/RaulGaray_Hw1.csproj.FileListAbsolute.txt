@@ -1,12 +1,32 @@
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.csprojResolveAssemblyReference.cache
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.AboutDialog.resources
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.EllipticChild.resources
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.MainForm.resources
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\Control_Library.OathDialog.resources
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.PreferencesDialog.resources
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.Properties.Resources.resources
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.csproj.GenerateResource.Cache
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\bin\Debug\RaulGaray_Hw1.exe.config
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\bin\Debug\RaulGaray_Hw1.exe
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\bin\Debug\RaulGaray_Hw1.pdb
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\bin\Debug\Control Library.dll
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\bin\Debug\Control Library.pdb
-C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.csprojResolveAssemblyReference.cache
-C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.MainForm.resources
-C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.PreferencesDialog.resources
-C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.Properties.Resources.resources
-C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.csproj.GenerateResource.Cache
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.exe
 C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.pdb
+C:\Users\Raul Garay\Documents\FIU\Fall 2014\COP 4226\Homework 1\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.LoginDialog.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\bin\Debug\RaulGaray_Hw1.exe.config
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.exe
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.pdb
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\bin\Debug\RaulGaray_Hw1.exe
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\bin\Debug\RaulGaray_Hw1.pdb
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\bin\Debug\Control Library.dll
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\bin\Debug\Control Library.pdb
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.csprojResolveAssemblyReference.cache
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.AboutDialog.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.EllipticChild.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.LoginDialog.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.MainForm.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\Control_Library.OathDialog.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.PreferencesDialog.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.Properties.Resources.resources
+C:\Users\Raul Garay\Desktop\RaulGaray_Hw1\obj\Debug\RaulGaray_Hw1.csproj.GenerateResource.Cache

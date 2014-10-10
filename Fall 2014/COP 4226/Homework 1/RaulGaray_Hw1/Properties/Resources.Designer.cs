@@ -63,9 +63,29 @@ namespace RaulGaray_Hw1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cloud {
+            get {
+                object obj = ResourceManager.GetObject("cloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Preferences_Background {
             get {
-                object obj = ResourceManager.GetObject("Preferences Background", resourceCulture);
+                object obj = ResourceManager.GetObject("Preferences_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SAND {
+            get {
+                object obj = ResourceManager.GetObject("SAND", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

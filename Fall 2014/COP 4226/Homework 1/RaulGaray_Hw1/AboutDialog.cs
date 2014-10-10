@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Control_Library
+namespace RaulGaray_Hw1
 {
-    public partial class OathDialog : BaseDialogForm
+    public partial class AboutDialog : Control_Library.BaseDialogForm
     {
-        public OathDialog()
+        public AboutDialog()
         {
             InitializeComponent();
         }
