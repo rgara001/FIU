@@ -117,13 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>I attest that the homework I am uploading was done by me. 
+  <data name="oathLabel.Text" xml:space="preserve">
+    <value>I attest that the homework I am uploading was done by me.
 
-I understand that if it is determined that I shared my 
-assignment with another person or copied my assignment 
-from another person's work, then I and the other person 
-will suffer the consequences that are defined in the syllabus.
+I understand that if it is determined that I shared my assignment with another person or copied my assignment from another person's work, then I and the other person  will suffer the consequences that are defined in the syllabus.
 
 Student: Raul Garay</value>
   </data>
